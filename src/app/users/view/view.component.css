@@ -1,0 +1,11 @@
+mat-card {
+  width: 500px;
+  margin: 20px;
+  padding: 10px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+mat-card-content {
+  margin: 5px;
+}

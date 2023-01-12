@@ -1,0 +1,39 @@
+<mat-card *ngFor="let each of names">
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem" style="height: 100px">
+        <h2 style="margin: 5px">{{ each.id }}. {{ each.name }}</h2>
+        <button
+          style="margin: 3px 10px"
+          mat-raised-button
+          (click)="viewUser(each.id)"
+        >
+          View Here
+        </button>
+        <button
+          style="margin: 3px 10px"
+          mat-raised-button
+          [routerLink]="['/users/view', each.id]"
+        >
+          View In New Window
+        </button>
+        <button
+          style="margin: 3px 10px"
+          mat-raised-button
+          color="primary"
+          [routerLink]="['/users/edit', each.id]"
+        >
+          Edit
+        </button>
+        <button
+          style="margin: 3px 10px"
+          mat-raised-button
+          color="warn"
+          [routerLink]="['/users/delete', each.id]"
+        >
+          Delete
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

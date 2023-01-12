@@ -1,0 +1,10 @@
+<mat-card *ngIf="names">
+  <mat-card-content>Name: {{ names.name }}</mat-card-content>
+  <mat-card-content>Email: {{ names.email }}</mat-card-content>
+  <mat-card-content>Phone: {{ names.phone }}</mat-card-content>
+  <mat-card-content>Website: {{ names.website }}</mat-card-content>
+  <br />
+  <button mat-raised-button color="warn" (click)="onDelete()">
+    Confirm Delete
+  </button>
+</mat-card>

@@ -1,0 +1,10 @@
+form {
+  margin: 20px;
+}
+
+mat-card {
+  width: 600px;
+  padding: 10px;
+  margin: 5px;
+  background-color: lavender;
+}

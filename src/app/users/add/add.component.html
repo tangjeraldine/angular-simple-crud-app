@@ -1,0 +1,29 @@
+<mat-card>
+  <form [formGroup]="addUserForm" (submit)="createUser()">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Username:</mat-label>
+        <input matInput placeholder="username" formControlName="username" />
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <br />
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Email:</mat-label>
+        <input matInput placeholder="Email" formControlName="email" />
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <br />
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone: </mat-label>
+        <input matInput placeholder="Phone" formControlName="phone" />
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <br />
+    <button mat-raised-button color="primary" type="submit">Add User</button>
+  </form>
+</mat-card>
