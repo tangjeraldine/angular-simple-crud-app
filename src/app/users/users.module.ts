@@ -15,6 +15,7 @@ import {
   MatSnackBarModule,
   MAT_SNACK_BAR_DEFAULT_OPTIONS,
 } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
 
 import {
   MatDialogModule,
@@ -44,6 +45,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     MatInputModule,
     MatSnackBarModule,
+    MatTableModule,
   ],
   providers: [
     {

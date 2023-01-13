@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { UserService } from 'src/app/Services/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Route, Router } from '@angular/router';
@@ -35,9 +40,20 @@ export class EditComponent implements OnInit {
             (this.names = data),
               console.log(this.names),
               (this.updateUserForm = this.formBuilder.group({
-                username: new FormControl(this.names?.username),
-                email: new FormControl(this.names?.email),
-                phone: new FormControl(this.names?.phone),
+                username: new FormControl(this.names?.username, [
+                  Validators.required,
+                  Validators.minLength(3),
+                  Validators.maxLength(20),
+                ]),
+                email: new FormControl(this.names?.email, [
+                  Validators.required,
+                  Validators.minLength(5),
+                  Validators.maxLength(20),
+                  Validators.email,
+                ]),
+                phone: new FormControl(this.names?.phone, [
+                  Validators.required,
+                ]),
               }));
           })
       : console.log('Unable to fetch user');

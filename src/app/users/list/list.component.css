@@ -3,3 +3,8 @@ mat-card {
   margin: 5px;
   width: 600px;
 }
+
+table {
+  width: 95%;
+  margin-left: 10px;
+}

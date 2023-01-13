@@ -1,0 +1,13 @@
+<p>anime works!</p>
+<button (click)="toggle()">Click for animation</button>
+<br /><br />
+<!-- <div class="a" *ngIf="show" @appear @disappear></div> -->
+
+<!-- <div
+  class="a"
+  [@toggling]="show ? 'open' : 'closed'"
+  (@toggling.start)="animstart($event)"
+  (@toggling.done)="animdone($event)"
+></div> -->
+
+<div class="a" @disappear *ngIf="show"></div>

@@ -6,19 +6,34 @@ import {
   MatDialogRef,
 } from '@angular/material/dialog';
 
+export interface User {
+  name: string;
+  id: number;
+  username: string;
+  email: string;
+}
+
+const ELEMENT_DATA: User[] = [];
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css'],
 })
 export class ListComponent implements OnInit {
+  displayedColumns: string[] = ['id', 'name', 'username', 'email', 'actions'];
+  dataSource = ELEMENT_DATA;
+
   names: any;
+
+  listUsers: User[] = [];
 
   constructor(private serv: UserService) {}
 
   ngOnInit(): void {
     this.serv.listUsers().subscribe((data) => {
-      this.names = data;
+      this.listUsers = data;
+      console.log(data);
     });
   }
 

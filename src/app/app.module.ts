@@ -11,9 +11,10 @@ import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from './layout/layout.module';
 import { UsersModule } from './users/users.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AnimeComponent } from './anime/anime.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AnimeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
